@@ -5,10 +5,10 @@ require 'echoe'
 desc 'Default: run the spec'
 task :default => :spec
 
-Echoe.new('resource_identifier', '0.1.0') do |p|
-  p.summary = "Have trully beautiful URLS in your Rails RESTful routes"
-  p.description = "An ActiveRecord plugin that allows you to specify a different table identifier (AR's default is the :id field)."
-  p.url = 'http://github.com/dterror/resource_identifier/'
+Echoe.new('slugify', '0.1.0') do |p|
+  p.summary = "Generates a slug - a URI compliant string - based on an attribute you specify."
+  p.description = "An ActiveRecord plugin generates a slug based on another attribute you specify"
+  p.url = 'http://github.com/dterror/slugify/'
   p.author = 'Diogo Terror'
   p.email = 'ranccis@gmail.com'
   p.development_dependencies = []

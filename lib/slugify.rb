@@ -19,7 +19,7 @@ module Slugify
     end
     
     def slugifier(str)
-      name.gsub(/á|â|ã/,'a').gsub(/é|ê/,'e').gsub(/í/,'i').gsub(/ú|ü/,'u').gsub(/ó|ô|õ/,'o').gsub(/ç/,'c'). \
+      str.gsub(/á|â|ã/,'a').gsub(/é|ê/,'e').gsub(/í/,'i').gsub(/ú|ü/,'u').gsub(/ó|ô|õ/,'o').gsub(/ç/,'c'). \
         gsub(/[^\w ]/, '').gsub(/ +/,'-').downcase
     end
   end
