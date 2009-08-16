@@ -14,5 +14,8 @@ def setup_db
     create_table :people, :force => true do |t|
       t.string :name, :slug
     end
+    create_table :articles, :force => true do |t|
+      t.string :title, :permalink
+    end
   end
 end
