@@ -1,0 +1,28 @@
+1.0
+	- allow people to specify their own algorithm to generate slugs and allow them to (only if they really really have to)
+      have a config hash table mapping date types string transformation methods, like boolean2string and the such
+
+0.9
+	- make the option for force override dynamic, such as force override unless admin user or some other condition
+	- let people specify their own slug fields manually but add a validation for errors on URI compliance
+	- slug have to be unique, right. Have one option to specify a way out by default, like a sequencer:
+	 'my-post' already exists? create as 'my-post-2'
+	
+0.6
+	- allow people to specify more than one field to generate the slug from and how to join both fields contents into a string
+	  slugify :title, :published_at, :join => '{published_at}-{title}'
+	  or something
+	- an option for setting if users are allowed to provive their custom slugs or if theire always overriden on save by the
+	  automatically generated one. :force_override => false (defaults to true, override whatever the user specified on
+	  the slug field)
+	
+0.3
+	- make sure that the current slugifier algorithm makes the field URI compliant
+	- agree on how to turn field types into slug, boolean becomes what, datetimes become what
+	- make slug generation occur after the validations have taken place
+	- :slug_field option to let people tell the name of the target field on the table. The default remains being just :slug	
+	- slug have to be unique, check if the generated one is unique, give people options to turn this out and
+	  have one option to specify a way out by default, like a sequencer: 'my-post' already exist, create as 'my-post-2'
+
+0.1 <= (we're here)
+	- basic functionality with slugify :attr, and pre-processing the file before validations occur
